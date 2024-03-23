@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    body {
+        font-family: 'Inter','Poppins',sans-serif;
+        color: white;
+    }
+
+    .tooltip {
+    opacity: 0;
+    transform-origin: 50% 50% 0px;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition */
+    transform: translateX(-10px); /* Start position for the slide out effect */
+}
+
+
+.icon:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto; /* Enable pointer events on the tooltip */
+    transform: translateX(0); /* Slide out effect */
+}
+
+
+
+.time {
+    font-family: 'DM Mono' ,sans-serif;
+}
+circle.fill-green {
+  fill: #2ebe8a; /* Add this line */
+}
+
+circle {
+  stroke: #2ebe8a;
+  stroke-width: 2px;
+  stroke-opacity: 1;
+}
+
+.pulse {
+  fill-opacity: 0;
+  transform-origin: 50% 50%;
+  animation-duration: 2s;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  from {
+    stroke-width: 3px;
+    stroke-opacity: 1;
+    transform: scale(0.3);
+  }
+  to {
+    stroke-width: 0;
+    stroke-opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.tooltip2 {
+    opacity: 0;
+    transform-origin: 50% 50% 0px;
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    transform: translateY(-10px); 
+    pointer-events: none; 
+}
+
+.link:hover .tooltip2 {
+    opacity: 1;
+    pointer-events: auto; 
+    transform: translateY(0); 
+}
+
+
+.about, .work {
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0em;
+    line-height: 1.5em;
+}
+
+
+
+
+.img img {
+    display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: contain; image-rendering: auto;
+}
+
+
+
+  </style>
+</head>
+<body class="bg-bg">
+  <div class="root flex">
+
+        <!--DESKTOP SIDEBAR-->
+    <div class="sidebar hidden fixed md:flex justify-center items-center h-screen w-[3%] px-8 border-r-white border border-y-0 border-l-transparent border-opacity-10">
+        <div>
+            <a href="./index.html" >
+            <div class="icon">
+                <div class="tooltip items-center flex bg-secondary2 absolute left-14 text-white text-[12.5px] border border-white border-opacity-5 p-1 rounded-lg">Home <span class="bg-accent border border-white border-opacity-5 px-1.5 rounded-sm ml-1">1</span></div>
+                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z" stroke="#626262" stroke-width="1.5"/>
+                    <path d="M15 18H9" stroke="#232323" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+            </div>
+        </a>
+        <a href="./work.html" class="">
+            <div class="icon mt-5">
+                <div class="tooltip items-center flex bg-secondary2 absolute left-14 text-white text-[12.5px] border border-white border-opacity-5 p-1 rounded-lg">Work <span class="bg-accent border border-white border-opacity-5 px-1.5 rounded-sm ml-1">2</span></div>
+                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 9H15M9 9V15M9 9V6C9 4.34315 7.65685 3 6 3C4.34315 3 3 4.34315 3 6C3 7.65685 4.34315 9 6 9H9ZM15 9V15M15 9H18C19.6569 9 21 7.65685 21 6C21 4.34315 19.6569 3 18 3C16.3431 3 15 4.34315 15 6V9ZM15 15H9M15 15V18C15 19.6569 16.3431 21 18 21C19.6569 21 21 19.6569 21 18C21 16.3431 19.6569 15 18 15H15ZM9 15L6 15C4.34315 15 3 16.3431 3 18C3 19.6569 4.34315 21 6 21C7.65685 21 9 19.6569 9 18V15Z" stroke="#dedede" stroke-width="1.5"/>
+                    </svg>
+            </div>
+            </a>
+
+            <a href="./stack.html" >
+                <div class="icon mt-5">
+                    <div class="tooltip items-center flex bg-secondary2 absolute left-14 text-white text-[12.5px] border border-white border-opacity-5 p-1 rounded-lg">Stack <span class="bg-accent border border-white border-opacity-5 px-1.5 rounded-sm ml-1">3</span></div>
+                    <svg width="24px" height="24px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke="#626262" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                        <path d="m1.75 11 6.25 3.25 6.25-3.25m-12.5-3 6.25 3.25 6.25-3.25m-6.25-6.25-6.25 3.25 6.25 3.25 6.25-3.25z"/>
+                        </svg>
+                </div>
+                </a>
+        </div>
+    </div>
+
+
+    <!--MOBILE SIDEBAR-->
+    <div class="sidebar bg-bg md:hidden flex justify-center items-center w-screen fixed bottom-0 px-8 border-t-white border border-b-0 border-x-transparent border-opacity-10 align-items-center">
+        <div class="flex justify-center items-center my-5 gap-8">
+            <a href="./index.html" class="items-center justify-center flex">
+            <div class="icon">
+                <div class="tooltip flex items-center bg-secondary2 absolute left-14 text-white text-[12.5px] border border-white border-opacity-5 p-1 rounded-lg">Home <span class="bg-accent border border-white border-opacity-5 px-1.5 rounded-sm ml-1">1</span></div>
+                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z" stroke="#dedede" stroke-width="1.5"/>
+                    <path d="M15 18H9" stroke="#232323" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+            </div>
+        </a>
+        <a href="./work.html"  class="items-center justify-center flex">
+            <div class="icon">
+                <div class="tooltip flex items-center bg-secondary2 absolute left-14 text-white text-[12.5px] border border-white border-opacity-5 p-1 rounded-lg">Work <span class="bg-accent border border-white border-opacity-5 px-1.5 rounded-sm ml-1">2</span></div>
+                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 9H15M9 9V15M9 9V6C9 4.34315 7.65685 3 6 3C4.34315 3 3 4.34315 3 6C3 7.65685 4.34315 9 6 9H9ZM15 9V15M15 9H18C19.6569 9 21 7.65685 21 6C21 4.34315 19.6569 3 18 3C16.3431 3 15 4.34315 15 6V9ZM15 15H9M15 15V18C15 19.6569 16.3431 21 18 21C19.6569 21 21 19.6569 21 18C21 16.3431 19.6569 15 18 15H15ZM9 15L6 15C4.34315 15 3 16.3431 3 18C3 19.6569 4.34315 21 6 21C7.65685 21 9 19.6569 9 18V15Z" stroke="#dedede" stroke-width="1.5"/>
+                    </svg>
+            </div>
+            </a>
+
+            <a href="" class="items-center justify-center flex">
+                <div class="icon ">
+                    <div class="tooltip flex items-center bg-secondary2 absolute left-14 text-white text-[12.5px] border border-white border-opacity-5 p-1 rounded-lg">Stack <span class="bg-accent border border-white border-opacity-5 px-1.5 rounded-sm ml-1">3</span></div>
+                    <svg width="24px" height="24px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                        <path d="m1.75 11 6.25 3.25 6.25-3.25m-12.5-3 6.25 3.25 6.25-3.25m-6.25-6.25-6.25 3.25 6.25 3.25 6.25-3.25z"/>
+                        </svg>
+                </div>
+                </a>
+        </div>
+    </div>
+    
+    <div class="main mx-auto px-6 sm:px-4 sm:my-8 mt-10 mb-24">
+        <h1>coming soon</h1>
+    </div>    
+  </div>
+
+</body>
+</html>
