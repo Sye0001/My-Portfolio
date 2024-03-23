@@ -97,6 +97,77 @@
 
 
 
+/* animation */
+.appear {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.appear.inview {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.appear2 {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.appear2.inview2 {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.appear2.inview2:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.appear2.inview2:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.appear2.inview2:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.appear2.inview2:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.appear2.inview2:nth-child(5) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.appear3 {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.appear3.inview {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
   </style>
 </head>
 <body class="bg-bg">
@@ -251,7 +322,6 @@
                 </div>
             </div>
 
-
             <div class="work mt-16  w-full flex">
                 <div class="pr-10">
                     <span class="text-white text-opacity-60 ">Work</span>
@@ -285,8 +355,9 @@
             </div>
             
         </div>
+    </div>
     </div>    
-  </div>
+
   <script>
     fetch('https://api.lanyard.rest/v1/users/208168562286788610')
         .then(response => response.json())
@@ -328,7 +399,7 @@
       });
     });
   </script>
-
+  <script src="./js/scroll.js"></script>
   <script src="./js/time.js"></script>
 </body>
 </html>
