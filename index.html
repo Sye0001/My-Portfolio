@@ -168,6 +168,340 @@
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
+
+
+/*=== Trigger  ===*/
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/*=== Optional Delays, change values here  ===*/
+.one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.two {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.three {
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.four {
+  -webkit-animation-delay: 3.5s;
+  -moz-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+
+.five {
+  -webkit-animation-delay: 4.5s;
+  -moz-animation-delay: 4.5s;
+  animation-delay: 4.5s;
+}
+
+.six {
+  -webkit-animation-delay: 5.5s;
+  -moz-animation-delay: 5.5s;
+  animation-delay: 5.5s;
+}
+
+.seven {
+  -webkit-animation-delay: 6.5s;
+  -moz-animation-delay: 6.5s;
+  animation-delay: 6.5s;
+}
+
+.eight {
+  -webkit-animation-delay: 7.5s;
+  -moz-animation-delay: 7.5s;
+  animation-delay: 7.5s;
+}
+
+/*=== Animations start here  ===*/
+
+/*==== FADE IN UP ===*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/*=== FADE IN DOWN ===*/
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/*=== FADE IN LEFT ===*/
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+/*==== FADE IN RIGHT ===*/
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+/*=== FADE IN  ===*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/*=== FADE IN UP Big ===*/
+.fadeInUpBig {
+  -webkit-animation-name: fadeInUpBig;
+  animation-name: fadeInUpBig;
+}
+@-webkit-keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/*=== FADE IN DOWN Big ===*/
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/*=== FADE IN LEFT Big ===*/
+.fadeInLeftBig {
+  -webkit-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
+}
+@-webkit-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/*=== FADE IN RIGHT Big ===*/
+.fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
+@-webkit-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
   </style>
 </head>
 <body class="bg-bg">
@@ -239,24 +573,24 @@
     </div>
     
     <div class="main mx-auto w-[40rem] px-6 sm:px-4 sm:my-8 mt-10 mb-24">
-        <div class="time text-opacity-40 font-thin text-white justify-center flex items-center">
+        <div class="time text-opacity-40 font-thin text-white justify-center flex items-center fadeIn animate one">
             <span id="user-time"></span>
         </div>
-        <div class="pfp items-center flex justify-center mt-10">
+        <div class="pfp fadeIn animate one items-center flex justify-center mt-10">
             <img id="pfp" class="rounded-full h-20 w-20" src="https://cdn.discordapp.com/avatars/208168562286788610/21b75edc30b18ae5ccfa043a7dd03409.webp?size=4096">
         </div>
-        <div class="name leading-8 text-[20px] text-center mt-5">
+        <div class="name fadeIn animate one leading-8 text-[20px] text-center mt-5">
             <h1>Sye</h1>
-            <h2 class="text-white text-opacity-60">Web Developer</h2>
+            <h2 class="text-white text-opacity-60 fadeIn animate one">Web Developer</h2>
         </div>
-        <div class="status justify-center flex gap-2 items-center mt-4" id="statusContainer">
+        <div class="status fadeIn animate one justify-center flex gap-2 items-center mt-4" id="statusContainer">
             <svg class="button" expanded="true" height="30px" width="30px">
                 <circle id="statusCircle" class="fill-green" cx="50%" cy="50%" r="6px"></circle>
                 <circle class="pulse" cx="50%" cy="50%" r="10px"></circle>
             </svg>
             <span id="statusText" class="text-white text-opacity-60 text-[14px]">I'm currently online</span>
         </div>
-        <div class="socials mt-5 justify-center items-center flex gap-8 text-white text-opacity-50">
+        <div class="socials mt-5 justify-center items-center flex gap-8 text-white text-opacity-50 fadeIn animate one">
           
           
             <a class="link" href="https://discordapp.com/users/208168562286788610" target="_blank">
@@ -288,7 +622,7 @@
 
             </div>
 
-            <div class="btns mt-5 justify-center items-center flex gap-4">
+            <div class="btns mt-5 justify-center items-center flex gap-4 fadeIn animate one">
                 <a class="btn py-2 px-6 bg-white text-black hover:bg-opacity-90 duration-200 ease-in-out rounded-lg flex items-center gap-2 text-sm cursor-pointer">Contact Me  <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_15_17)">
                     <rect width="24" height="24" />
@@ -306,7 +640,7 @@
             </div>
 
 
-            <div class="about mt-16  w-full flex">
+            <div class="about mt-16 fadeInUp animate two  w-full flex">
                 <div class="pr-10">
                     <span class="text-white text-opacity-60 ">About</span>
                 </div>
@@ -322,7 +656,7 @@
                 </div>
             </div>
 
-            <div class="work mt-16  w-full flex">
+            <div class="work mt-16 fadeInUp animate two w-full flex">
                 <div class="pr-10">
                     <span class="text-white text-opacity-60 ">Work</span>
                 </div>
