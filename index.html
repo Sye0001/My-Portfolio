@@ -59,20 +59,25 @@
     transform: scale(2);
   }
 }
-
 .tooltip2 {
+
+    transform: translateX(-50%) translateY(-10px); /* Center horizontally and offset slightly */
+    z-index: 2; /* Ensure the tooltip is above other elements */
     opacity: 0;
-    transform-origin: 50% 50% 0px;
     transition: opacity 0.3s ease, transform 0.3s ease; 
-    transform: translateY(-10px); 
     pointer-events: none; 
 }
 
 .link:hover .tooltip2 {
     opacity: 1;
     pointer-events: auto; 
-    transform: translateY(0); 
+    transform: translateX(-50%) translateY(0); /* Show tooltip on hover */
 }
+.link {
+    position: relative; /* Establishes a new stacking context */
+    z-index: 1; /* Ensure the parent container is above other elements */
+}
+
 
 
 .about, .work {
@@ -543,7 +548,7 @@
 
 
     <!--MOBILE SIDEBAR-->
-    <div class="sidebar bg-bg md:hidden flex justify-center items-center w-screen fixed bottom-0 px-8 border-t-white border border-b-0 border-x-transparent border-opacity-10 align-items-center">
+    <div class="sidebar z-50 bg-bg md:hidden flex justify-center items-center w-screen fixed bottom-0 px-8 border-t-white border border-b-0 border-x-transparent border-opacity-10 align-items-center">
         <div class="flex justify-center items-center my-5 gap-8">
             <a href="./index.html"  class="items-center justify-center flex">
             <div class="icon">
@@ -574,7 +579,7 @@
         </div>
     </div>
     
-    <div class="main mx-auto w-[40rem] px-6 sm:px-4 sm:my-8 mt-10 mb-24">
+    <div class="main mx-auto w-[40rem] px-2 sm:px-4 sm:my-8 mt-10 mb-24">
         <div class="time text-opacity-40 font-thin text-white justify-center flex items-center fadeIn animate one">
             <span id="user-time"></span>
         </div>
@@ -596,7 +601,7 @@
           
           
             <a class="link" href="https://discordapp.com/users/208168562286788610" target="_blank">
-            <div class="tooltip2 items-center flex bg-secondary2 absolute bottom-[59%] text-white text-[12.5px] border border-white border-opacity-5 p-1 rounded-lg">Discord</div>
+            <div class="tooltip2 items-center flex bg-secondary2 absolute bottom-[100%] left-[50%] text-white text-[12.5px] border border-white border-opacity-5 p-1 rounded-lg">Discord</div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
                     <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
                   </svg>
@@ -604,7 +609,7 @@
 
                   
             <a class="link" href="https://moonhub.lol" target="_blank">
-                <div class="tooltip2 items-center flex bg-secondary2 absolute bottom-[59%] text-white text-[12.5px] border border-white border-opacity-5 p-1 rounded-lg">Moonhub.lol</div>
+                <div class="tooltip2 items-center flex bg-secondary2 absolute bottom-[100%] left-[50%] text-white text-[12.5px] border border-white border-opacity-5 p-1 rounded-lg">Moonhub.lol</div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
                     <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
                   </svg>
@@ -613,7 +618,7 @@
                     
                       
             <a class="link" href="https://github.com/sye0001" target="_blank">
-                <div class="tooltip2 items-center flex bg-secondary2 absolute bottom-[59%] text-white text-[12.5px] border border-white border-opacity-5 p-1 rounded-lg">Github</div>
+                <div class="tooltip2 items-center flex bg-secondary2 absolute bottom-[100%] left-[50%] text-white text-[12.5px] border border-white border-opacity-5 p-1 rounded-lg">Github</div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                   </svg>
