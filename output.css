@@ -544,12 +544,50 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .fixed {
   position: fixed;
 }
 
 .absolute {
   position: absolute;
+}
+
+.relative {
+  position: relative;
 }
 
 .bottom-0 {
@@ -562,6 +600,74 @@ video {
 
 .left-14 {
   left: 3.5rem;
+}
+
+.left-20 {
+  left: 5rem;
+}
+
+.left-32 {
+  left: 8rem;
+}
+
+.bottom-\[79\%\] {
+  bottom: 79%;
+}
+
+.bottom-\[29\%\] {
+  bottom: 29%;
+}
+
+.bottom-\[0\%\] {
+  bottom: 0%;
+}
+
+.top-\[20\%\] {
+  top: 20%;
+}
+
+.top-\[50\%\] {
+  top: 50%;
+}
+
+.top-\[80\%\] {
+  top: 80%;
+}
+
+.top-\[90\%\] {
+  top: 90%;
+}
+
+.bottom-\[69\%\] {
+  bottom: 69%;
+}
+
+.bottom-\[99\%\] {
+  bottom: 99%;
+}
+
+.bottom-\[120\%\] {
+  bottom: 120%;
+}
+
+.bottom-\[110\%\] {
+  bottom: 110%;
+}
+
+.left-\[20\%\] {
+  left: 20%;
+}
+
+.left-\[50\%\] {
+  left: 50%;
+}
+
+.bottom-\[100\%\] {
+  bottom: 100%;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .mx-auto {
@@ -845,6 +951,26 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .pr-0 {
   padding-right: 0px;
 }
@@ -984,6 +1110,11 @@ video {
   .sm\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .sm\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 
